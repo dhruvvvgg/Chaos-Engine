@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { ChaosMoment } from '../types';
 import { STRATEGY_OPTIONS } from '../data';
 import { DRIVER_MAP } from '../utils';
-import TeamLogo from './TeamLogo';
 import { X, Play, Cpu, AlertCircle, Radio, Shield, Settings2 } from 'lucide-react';
 
 interface WhatIfModalProps {
@@ -70,7 +69,6 @@ export default function WhatIfModal({ moment, onClose, onRunSimulation, simulati
           </div>
 
           <div className="flex items-center gap-3 flex-1">
-            <TeamLogo team={driverInfo.team} className="w-8 h-8 shrink-0 bg-black/40 p-1.5 rounded-lg border border-white/10" />
             <div className="flex flex-col gap-0.5">
               <div className="flex items-center gap-2">
                 <span className="text-[9px] text-zinc-500 uppercase tracking-wider font-extrabold">DRIVER CONTEXT</span>

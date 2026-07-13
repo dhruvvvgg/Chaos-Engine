@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Race } from '../types';
 import { TRACK_DETAILS, RACE_TELEMETRY } from '../utils';
-import TeamLogo from './TeamLogo';
 import { 
   Gauge, AlertTriangle, RefreshCw, Wind, Droplets, Thermometer, Compass, 
   ShieldAlert, Zap, Layers, Activity, Radio, Flag, Award, ChevronRight 
@@ -290,7 +289,6 @@ export default function ChaosScoreCard({ race }: ChaosScoreCardProps) {
         className="inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider border ml-2 select-none shrink-0"
         style={style}
       >
-        <TeamLogo team={badge.abbrev} className="w-3.5 h-3.5 mr-1" />
         {badge.abbrev}
       </span>
     );
@@ -423,50 +421,6 @@ export default function ChaosScoreCard({ race }: ChaosScoreCardProps) {
           <p className="text-[11px] text-zinc-400 truncate max-w-[280px]">
             {race.circuit}
           </p>
-
-          {/* Glowing Animated SVG Circuit Map */}
-          {details?.svgPath && (
-            <div className="relative w-full h-28 my-3 bg-black/25 border border-white/5 rounded-xl flex items-center justify-center p-3 overflow-hidden group/circuit">
-              {/* Technical background grids */}
-              <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:10px_10px] pointer-events-none" />
-              
-              <svg className="w-full h-full max-h-20 drop-shadow-[0_0_8px_rgba(225,6,0,0.25)]" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
-                {/* Underlay glow path */}
-                <path
-                  d={details.svgPath}
-                  fill="none"
-                  stroke="#e10600"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="opacity-25 blur-[2px] transition-all duration-700 group-hover/circuit:stroke-[#00D25B]"
-                />
-                {/* Foreground glowing path */}
-                <path
-                  d={details.svgPath}
-                  fill="none"
-                  stroke="#e10600"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="transition-all duration-700 group-hover/circuit:stroke-[#00D25B]"
-                />
-                
-                {/* Animating Telemetry Dot flying around the track */}
-                <circle r="2.5" fill="#ffffff" className="shadow-[0_0_8px_#fff]">
-                  <animateMotion
-                    dur="12s"
-                    repeatCount="indefinite"
-                    path={details.svgPath}
-                  />
-                </circle>
-              </svg>
-
-              <span className="absolute bottom-1 right-2 text-[8px] font-mono font-bold tracking-wider text-zinc-500 uppercase">
-                GP LAYOUT COGNITION
-              </span>
-            </div>
-          )}
 
           {/* Real Statistics Grid */}
           <div className="grid grid-cols-2 gap-2 mt-4 mb-4 text-xs">

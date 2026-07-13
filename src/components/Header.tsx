@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Radio, ShieldAlert } from 'lucide-react';
-import { F1Logo } from './TeamLogo';
 
 export default function Header() {
   const [utcTime, setUtcTime] = useState('');
@@ -18,14 +17,10 @@ export default function Header() {
   return (
     <header className="border-b border-white/10 bg-zinc-950/80 backdrop-blur-md px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4 sticky top-0 z-40">
       <div className="flex items-center gap-4">
-        {/* F1 Logo & glowing core */}
-        <div className="flex items-center gap-3">
-          <F1Logo className="h-5" />
-          <div className="w-[1px] h-6 bg-white/10 hidden sm:block" />
-          <div className="relative">
-            <div className="w-3.5 h-3.5 bg-f1-red rounded-full animate-pulse shadow-[0_0_12px_#e10600]"></div>
-            <div className="absolute -inset-1 bg-f1-red/30 rounded-full animate-ping"></div>
-          </div>
+        {/* glowing core indicator */}
+        <div className="relative">
+          <div className="w-3.5 h-3.5 bg-f1-red rounded-full animate-pulse shadow-[0_0_12px_#e10600]"></div>
+          <div className="absolute -inset-1 bg-f1-red/30 rounded-full animate-ping"></div>
         </div>
         
         <div className="flex items-center gap-3">

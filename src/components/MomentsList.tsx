@@ -1,6 +1,5 @@
 import { ChaosMoment } from '../types';
 import { DRIVER_MAP } from '../utils';
-import TeamLogo from './TeamLogo';
 import { Sliders, Flame, ArrowUpDown, CircleDot, Radio, ArrowUpRight } from 'lucide-react';
 
 interface MomentsListProps {
@@ -99,7 +98,6 @@ export default function MomentsList({ moments, onSelectMoment }: MomentsListProp
                 <div className="flex items-center gap-3">
                   <div>
                     <div className="flex items-center gap-2">
-                      <TeamLogo team={driverInfo.team} className="w-4 h-4 shrink-0" />
                       <span 
                         className="font-extrabold text-xs" 
                         style={{ color: driverInfo.teamColor }}

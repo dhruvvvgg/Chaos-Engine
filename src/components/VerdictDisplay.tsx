@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { WhatIfResponse } from '../types';
 import { DRIVER_MAP } from '../utils';
-import TeamLogo from './TeamLogo';
 import { Volume2, VolumeX, RotateCcw, AlertTriangle, ShieldCheck, HelpCircle, Activity, Play, Signal } from 'lucide-react';
 
 interface VerdictDisplayProps {
@@ -105,7 +104,6 @@ export default function VerdictDisplay({ verdict, momentDriver, momentLap, chose
       {/* Simulation Header */}
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-white/5 pb-4">
         <div className="flex items-center gap-4">
-          <TeamLogo team={driverInfo.team} className="w-10 h-10 shrink-0 bg-black/40 p-2 rounded-xl border border-white/10" />
           <div className="flex flex-col">
             <div className="flex items-center gap-2">
               <span className="text-[9px] text-f1-red font-semibold tracking-widest uppercase flex items-center gap-1.5">

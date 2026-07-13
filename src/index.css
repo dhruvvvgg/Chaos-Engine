@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Titillium Web", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Titillium Web", sans-serif;
+  --font-mono: "Titillium Web", sans-serif;
+  
+  --color-f1-red: #e10600;
+  --color-f1-black: #0a0a0c;
+  --color-f1-dark: #121216;
+  --color-f1-dark-gray: #1a1a22;
+  --color-f1-card: #16161a;
+  --color-f1-border: #2d2d30;
+  --color-f1-grey: #a0a0a8;
+  --color-f1-success: #00ff41;
+  --color-f1-warning: #ffb800;
+}
+
+@layer utilities {
+  .glow-red {
+    text-shadow: 0 0 8px rgba(225, 6, 0, 0.6), 0 0 15px rgba(225, 6, 0, 0.3);
+  }
+  .box-glow {
+    box-shadow: 0 0 12px rgba(225, 6, 0, 0.12);
+  }
+  .signature-gradient {
+    background: linear-gradient(90deg, #00ff41 0%, #ffb800 50%, #e10600 100%);
+  }
+
+  /* Premium cubic-bezier transition curves and animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-glow-pulse {
+    animation: pulseGlow 2s infinite ease-in-out;
+  }
+}
+
+body {
+  background-color: #0a0a0c;
+  color: #ffffff;
+}

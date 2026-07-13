@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <!-- Singapore Marina Bay 2023 revised layout outline -->
+  <path 
+    d="M 310,70 L 120,70 C 95,70 85,85 95,105 L 115,130 C 125,145 140,140 155,160 L 155,180 C 165,195 185,190 200,170 L 200,125 L 230,115 C 245,110 250,130 240,140 L 215,155 L 215,185 L 175,195 L 175,225 L 155,230 C 130,235 130,255 150,260 L 250,260 C 270,260 280,250 280,235 L 320,235 L 330,250 L 350,250 L 340,160 C 335,125 350,95 310,70 Z" 
+    fill="none" 
+    stroke="#ffffff" 
+    stroke-width="6" 
+    stroke-linecap="round" 
+    stroke-linejoin="round" 
+  />
+</svg>

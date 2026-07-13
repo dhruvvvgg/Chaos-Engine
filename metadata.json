@@ -1,0 +1,6 @@
+{
+  "name": "Chaos Engine",
+  "description": "An interactive F1 what-if strategy tool powered by Gemini.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

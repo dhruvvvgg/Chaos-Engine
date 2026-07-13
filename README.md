@@ -30,16 +30,13 @@ Every race weekend ends the same way: "they should have pitted two laps earlier,
 
 This app was built and lives inside Google AI Studio's Build mode. To view or fork it:
 
-1. Open the project in [Google AI Studio](https://aistudio.google.com).
-2. [add your specific share/fork link or Cloud Run deployment link here once available]
+Open the project in [Google AI Studio]([https://chaos-engine.ai.studio).
 
 If you'd rather run it outside AI Studio, export the project as a ZIP from the Build mode interface and set the `GEMINI_API_KEY` environment variable in your own hosting environment, since the app's Gemini calls are made server-side.
 
 ## Prize Categories
 
 **Best Use of Google AI** — Gemini is the reasoning engine behind every what-if in the app, taking real race data and returning a grounded verdict instead of a generic guess, plus writing the race-level chaos explanations. The app was also built inside Google AI Studio's Build mode.
-
-[add Snowflake or ElevenLabs details here if those ended up wired in]
 
 ## About
 
